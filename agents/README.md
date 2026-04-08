@@ -7,6 +7,7 @@ Live registry of all agents in the company. Update this file when an agent is hi
 | CEO | Chief Executive Officer | Board | CTO, CMO | Active |
 | CTO | Chief Technology Officer | CEO | — | Active |
 | CMO | Chief Marketing Officer | CEO | — | Active |
+| DocOps | Document Operations Agent | CEO | — | Active |
 
 ## Notes
 
