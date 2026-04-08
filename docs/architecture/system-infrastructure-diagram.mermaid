@@ -1,0 +1,56 @@
+---
+title: Board of Directors Company — System Infrastructure & Data Flow
+---
+graph LR
+    subgraph BOARD["👤 Human Board / Users"]
+        USER["Board Member\n(web UI / CLI)"]
+    end
+
+    subgraph CONTROL["Paperclip Control Plane\n(127.0.0.1:3100)"]
+        API["REST API\n/api/..."]
+        SCHED["Heartbeat\nScheduler"]
+        INBOX["Agent Inboxes\n& Assignments"]
+        APPROVAL["Approval\nGateway"]
+    end
+
+    subgraph AGENTS["Agent Layer (claude_local)"]
+        CEO_A["CEO"]
+        CMO_A["CMO"]
+        CTO_A["CTO"]
+        QCA_A["QCAgent"]
+        DOC_A["DocOps"]
+        ICE_A["ICEngineer"]
+    end
+
+    subgraph WORKSPACE["Execution Workspace"]
+        REPO["Git Repo\n/home/jarvis2048/paperclip/\nBoard of Directors company"]
+        FS["Filesystem\ndocs/ agents/ operations/\ngrowth/ shared-knowledge/"]
+    end
+
+    USER -- "create/update tasks\nreview approvals" --> API
+    API --> INBOX
+    SCHED -- "wake heartbeat" --> CEO_A
+    SCHED -- "wake heartbeat" --> CMO_A
+    SCHED -- "wake heartbeat" --> CTO_A
+    SCHED -- "wake heartbeat" --> QCA_A
+    SCHED -- "wake heartbeat" --> DOC_A
+    SCHED -- "wake heartbeat" --> ICE_A
+
+    CEO_A -- "checkout/update tasks\nassign/delegate" --> API
+    CMO_A -- "checkout/update tasks" --> API
+    CTO_A -- "checkout/update tasks" --> API
+    QCA_A -- "checkout/update tasks" --> API
+    DOC_A -- "checkout/update tasks" --> API
+    ICE_A -- "checkout/update tasks" --> API
+
+    API --> APPROVAL
+    APPROVAL -- "approval events" --> CEO_A
+
+    CEO_A -- "read/write files\ngit commits" --> REPO
+    CMO_A -- "read/write files\ngit commits" --> REPO
+    CTO_A -- "read/write files\ngit commits" --> REPO
+    DOC_A -- "read/write files\ngit commits" --> REPO
+    ICE_A -- "read/write files\ngit commits" --> REPO
+    QCA_A -- "read/write files" --> REPO
+
+    REPO --- FS
