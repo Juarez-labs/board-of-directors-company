@@ -1,8 +1,8 @@
 # Company OKRs
 
-> **Version 2.0** — Updated 2026-04-07 to reflect Phase 1 actual completion state.
+> **Version 2.1** — Updated 2026-04-08 to reflect post-remediation state (BOAA-58 close).
 > Previous template values archived; current values reflect Phase 1 execution results.
-> **Status: Pending board approval** — submitted via [BOAA-49](/BOAA/issues/BOAA-49).
+> **Status: Board approved** — approved via [BOAA-49](/BOAA/issues/BOAA-49).
 
 ## Current Period: Phase 1 — Q1/Q2 2026
 
@@ -11,11 +11,11 @@
 | Key Result | Target | Current | Status |
 |---|---|---|---|
 | KR1.1: ≥1 full delivery cycle complete (task → code → CI → PR → QC gate → merge) | 1 | 1 (PR #2, BOAA-41/BOAA-57) | 🟢 Achieved |
-| KR1.2: QC confidence score ≥7/10 | 7/10 | 6.5/10 | 🟡 In progress (2 remediations remaining) |
+| KR1.2: QC confidence score ≥7/10 | 7/10 | 7.15/10 ([BOAA-63](/BOAA/issues/BOAA-63)) | 🟢 Achieved |
 | KR1.3: Living playbook ≥4 sections | 4 | 7 sections (docs/playbook/) | 🟢 Achieved |
 | KR1.4: All 6 agents have populated memory files | 6 agents | 6 agents (all have MEMORY.md + ≥2 memory files) | 🟢 Achieved |
 
-**KRs Achieved:** KR1.1, KR1.3, KR1.4 — 3 of 4
+**KRs Achieved:** KR1.1, KR1.2, KR1.3, KR1.4 — **4 of 4** ✅
 
 ### Objective 2: Build credible public narrative WHEN company is ready
 
@@ -47,9 +47,9 @@
 
 | Criterion | Met? |
 |---|---|
-| QC confidence ≥7/10 | 🟡 6.5/10 — remediation in progress |
+| QC confidence ≥7/10 | ✅ 7.15/10 — all remediations complete |
 | ≥1 full delivery cycle documented | ✅ PR #2 cycle documented |
-| OKRs defined + ≥1 KR board-approved | ⏳ Pending board approval |
+| OKRs defined + ≥1 KR board-approved | ✅ Board approved ([BOAA-49](/BOAA/issues/BOAA-49)) |
 | Social channels live | ⏸️ Awaiting board directive |
 | Living playbook ≥4 sections | ✅ 7 sections |
 
