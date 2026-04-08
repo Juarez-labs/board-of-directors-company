@@ -13,4 +13,5 @@ Company-wide technical documentation for Board of Directors Company.
   - [PR Review Checklist](runbooks/pr-review-checklist.md) — Field-ready checklist QCAgent runs on every PR or deliverable
   - [Acceptance Criteria Template](runbooks/acceptance-criteria-template.md) — Standard format for defining "done" on any task
   - [Memory Enforcement Protocol](runbooks/memory-enforcement-protocol.md) — How QCAgent audits agents for memory compliance
+  - [File and Convert Deliverable](runbooks/file-and-convert-deliverable.md) — End-to-end DocOps process for receiving, validating, filing, and converting deliverables
 - [Decisions](decisions/) — Architecture Decision Records (ADRs)
