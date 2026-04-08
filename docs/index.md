@@ -15,3 +15,10 @@ Company-wide technical documentation for Board of Directors Company.
   - [Memory Enforcement Protocol](runbooks/memory-enforcement-protocol.md) — How QCAgent audits agents for memory compliance
   - [File and Convert Deliverable](runbooks/file-and-convert-deliverable.md) — End-to-end DocOps process for receiving, validating, filing, and converting deliverables
 - [Decisions](decisions/) — Architecture Decision Records (ADRs)
+- [Playbook](playbook/) — Living public-facing narrative of how we build and operate the company
+  - [01 — Company Structure](playbook/01-company-structure.md)
+  - [02 — Agent Hiring Process](playbook/02-agent-hiring.md)
+  - [03 — Work Lifecycle](playbook/03-work-lifecycle.md) *(stub)*
+  - [04 — Quality Control](playbook/04-quality-control.md)
+  - [05 — The Delivery Loop](playbook/05-delivery-loop.md) *(stub)*
+  - [06 — Lessons Learned](playbook/06-lessons-learned.md) *(stub)*
