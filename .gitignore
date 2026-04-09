@@ -2,3 +2,7 @@ node_modules/
 .env
 .env.*
 dist/
+
+# Fly.io — only the per-project fly.toml/dockerignore belong; never commit root-level ones
+/fly.toml
+/.dockerignore
