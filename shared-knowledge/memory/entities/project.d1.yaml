@@ -1,0 +1,11 @@
+- id: project.d1-owner-1775717322265
+  entity: project.d1
+  attribute: owner
+  value: CEO
+  date: '2026-04-09'
+  source_agent: agent.ceo
+  tags:
+    - project
+    - d1
+  status: active
+  superseded_by: null

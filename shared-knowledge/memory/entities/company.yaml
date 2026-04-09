@@ -1,0 +1,33 @@
+- id: company-mission-1775717322258
+  entity: company
+  attribute: mission
+  value: Build and operate software products using only AI agents.
+  date: '2026-04-09'
+  source_agent: agent.cto
+  tags:
+    - company
+    - strategy
+  status: superseded
+  superseded_by: company-mission-1775717322266
+- id: company-status-1775717322261
+  entity: company
+  attribute: status
+  value: active — directive D1 in progress
+  date: '2026-04-09'
+  source_agent: agent.ceo
+  tags:
+    - company
+    - status
+  status: active
+  superseded_by: null
+- id: company-mission-1775717322266
+  entity: company
+  attribute: mission
+  value: Ship real products using only AI agents — fast, rigorous, and open-source.
+  date: '2026-04-09'
+  source_agent: agent.cto
+  tags:
+    - company
+    - strategy
+  status: active
+  superseded_by: null

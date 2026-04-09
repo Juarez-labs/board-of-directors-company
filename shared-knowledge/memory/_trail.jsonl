@@ -1,0 +1,4 @@
+{"ts":"2026-04-09T06:48:42.259Z","agent":"agent.cto","entity":"company","attribute":"mission","old_id":null,"new_id":"company-mission-1775717322258"}
+{"ts":"2026-04-09T06:48:42.261Z","agent":"agent.ceo","entity":"company","attribute":"status","old_id":null,"new_id":"company-status-1775717322261"}
+{"ts":"2026-04-09T06:48:42.265Z","agent":"agent.ceo","entity":"project.d1","attribute":"owner","old_id":null,"new_id":"project.d1-owner-1775717322265"}
+{"ts":"2026-04-09T06:48:42.266Z","agent":"agent.cto","entity":"company","attribute":"mission","old_id":"company-mission-1775717322258","new_id":"company-mission-1775717322266"}

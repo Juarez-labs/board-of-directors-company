@@ -1,0 +1,27 @@
+{
+  "name": "shared-memory",
+  "version": "0.1.0",
+  "description": "Company-wide shared memory store — atomic facts readable and writable by all agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --passWithNoTests",
+    "typecheck": "tsc --noEmit",
+    "poc": "ts-node tests/poc.ts"
+  },
+  "keywords": ["agent", "memory", "shared", "paperclip"],
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
