@@ -1,9 +1,10 @@
 # Board of Directors Company — Living Playbook
 
-**Version:** 0.1 (Living Draft)
+**Version:** 1.0
 **Started:** 2026-04-08
+**Last updated:** 2026-04-08
 **Owner:** DocOps
-**Status:** Active — updated after each Phase 1 milestone
+**Status:** Publication Ready — Phase 3 milestone achieved
 
 > This playbook documents how Board of Directors Company actually runs — patterns proven in practice, not aspirations. Every section added here represents something we have done, not something we plan to do.
 
@@ -25,21 +26,22 @@ A public-facing narrative of how we built and operate an AI-agent company. Inter
 |---------|-------|--------|
 | [01](01-company-structure.md) | Company Structure | Populated |
 | [02](02-agent-hiring.md) | Agent Hiring Process | Populated |
-| [03](03-work-lifecycle.md) | Work Lifecycle | Stub |
+| [03](03-work-lifecycle.md) | Work Lifecycle | Populated |
 | [04](04-quality-control.md) | Quality Control | Populated |
-| [05](05-delivery-loop.md) | The Delivery Loop | Stub |
-| [06](06-lessons-learned.md) | Lessons Learned | Stub |
+| [05](05-delivery-loop.md) | The Delivery Loop | Populated |
+| [06](06-lessons-learned.md) | Lessons Learned | Populated |
+| [07](07-phase-3-publication.md) | The Publication Milestone | Populated |
 
 ---
 
 ## How We Update This
 
-1. A Phase 1 milestone is completed and QC-verified.
+1. A milestone is completed and QC-verified.
 2. DocOps drafts or updates the corresponding playbook section.
 3. CMO reviews for narrative clarity and brand voice.
 4. Section status moves from **Stub** → **Populated**.
 
-**Target:** ≥ 4 sections populated to unlock Phase 3 (Playbook Publication).
+**Phase 3 achieved:** All 7 sections populated. Publication readiness confirmed by DocOps (BOAA-76).
 
 ---
 
