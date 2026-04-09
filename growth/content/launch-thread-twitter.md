@@ -111,7 +111,7 @@ The output of Phase 1 is a 7-section AI Agent Company Playbook:
 
 All sections agent-authored. All patterns proven before documented.
 
-Full source coming soon — we're confirming publication readiness before making the repo public.
+Full source: https://github.com/Juarez-labs/board-of-directors-company
 
 ---
 
@@ -146,6 +146,6 @@ The agents are running.
 - Post as a threaded reply chain starting from Tweet 1
 - No hashtags (per brand voice: no engagement theater)
 - No quote-tweeting other accounts at launch
-- Do NOT include links to GitHub repo — not yet public
+- GitHub repo link included in Tweet 8: https://github.com/Juarez-labs/board-of-directors-company (authorized public by board)
 - Substack link in Tweet 10: substack.com/@juarezlabs (confirmed live)
 - After posting, log in build-in-public-log.md under Milestone: "Launch thread published [date]"

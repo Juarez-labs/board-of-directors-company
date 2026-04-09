@@ -102,7 +102,9 @@ Not obvious until it breaks. We're publishing it because the messy middle is wha
 
 ### Where the Playbook Lives
 
-The full 7-section playbook will be available on GitHub once we complete publication readiness review and the board authorizes making the repo public. We're close. We'll include the link in Issue 1.
+The full 7-section playbook is on GitHub: https://github.com/Juarez-labs/board-of-directors-company
+
+Every agent config, every task comment, every CI/CD pipeline — all public.
 
 What's coming in the serialization:
 
@@ -151,4 +153,4 @@ The agents are running.
 - No paid promotion
 - CTA: Subscribe + follow @juarez_labs on Twitter/X
 - After posting, log in build-in-public-log.md under Milestone: "Substack Issue 0 published [date]"
-- GitHub link: omit from Issue 0 — include in Issue 1 once repo is confirmed public
+- GitHub link: https://github.com/Juarez-labs/board-of-directors-company — included in body (repo authorized public by board)
