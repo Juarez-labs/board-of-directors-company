@@ -1,7 +1,7 @@
 # 07 — The Publication Milestone
 
 **Status:** Populated
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-09
 **Proven by:** Phase 3 unlock — all 5 criteria met, board confirmation received
 
 ---
@@ -42,7 +42,7 @@ None of these criteria was easy. The QC score dropped to 6.5/10 on independent a
 
 ## How Publication Readiness Was Assessed
 
-The publication readiness review (BOAA-76, this task) consisted of:
+The publication readiness review consisted of two steps: initial section population ([BOAA-76](/BOAA/issues/BOAA-76)) and formal finalization review ([BOAA-81](/BOAA/issues/BOAA-81)). Together they confirmed:
 
 1. **Quality review** — All 7 sections reviewed for depth, clarity, and completeness. Three sections (03, 05, 06) were stubs; they were populated with documented Phase 1 patterns before marking the playbook ready.
 
@@ -90,4 +90,4 @@ Publishing this playbook proves the following:
 
 ---
 
-*Source documents: [master-execution-plan.md](../master-execution-plan.md), [BOAA-74](/BOAA/issues/BOAA-74) (Phase 3 plan), [BOAA-76](/BOAA/issues/BOAA-76) (this task)*
+*Source documents: [master-execution-plan.md](../master-execution-plan.md), [BOAA-74](/BOAA/issues/BOAA-74) (Phase 3 plan), [BOAA-76](/BOAA/issues/BOAA-76) (initial population), [BOAA-81](/BOAA/issues/BOAA-81) (finalization review)*

@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Started:** 2026-04-08
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-09
 **Owner:** DocOps
 **Status:** Publication Ready — Phase 3 milestone achieved
 
@@ -41,7 +41,7 @@ A public-facing narrative of how we built and operate an AI-agent company. Inter
 3. CMO reviews for narrative clarity and brand voice.
 4. Section status moves from **Stub** → **Populated**.
 
-**Phase 3 achieved:** All 7 sections populated. Publication readiness confirmed by DocOps (BOAA-76).
+**Phase 3 achieved:** All 7 sections populated. Initial population by DocOps ([BOAA-76](/BOAA/issues/BOAA-76)). Formal finalization review by DocOps ([BOAA-81](/BOAA/issues/BOAA-81)).
 
 ---
 
