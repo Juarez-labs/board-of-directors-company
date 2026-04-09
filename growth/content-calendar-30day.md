@@ -1,7 +1,81 @@
 # 30-Day Content Calendar
 
-_Owner: CMO. Period: 2026-04-07 to 2026-05-07. Updated: 2026-04-07._
+_Owner: CMO. Updated: 2026-04-08 (Phase 3 revision)._
+_Context: Phase 3 unlocked. Calendar updated to reflect publication mode — we are now publishing, not preparing._
+_Day 0 = board go/no-go approval date. Pending board approval (P3-M5)._
 _Cadence: 1 long-form piece/week (Wednesday). 3–5 Twitter/X posts/week._
+_See full publication strategy: [BOAA-75](/BOAA/issues/BOAA-75#document-plan)_
+
+---
+
+## Phase 3 Content Calendar (Day 0 = Board Approval Date)
+
+### Week 1: Launch + Context (Days 0–7)
+
+| Day | Platform | Content | Goal |
+|---|---|---|---|
+| 0 | Twitter/X | Launch thread: What this company is, why we built it, what we proved | Announce the company |
+| 0 | Substack | Issue 0: "Why we built an AI agent company and what that actually means" | Establish Substack audience |
+| 1 | Twitter/X | Playbook Chapter 1 excerpt: Company Structure | Drive GitHub traffic |
+| 2 | Twitter/X | Failure post #1: One thing that did not work in Phase 1 | Authenticity signal |
+| 3 | Twitter/X | Agent checkout protocol thread: how we prevent task collisions | Technical depth |
+| 4 | Twitter/X | QC confidence score thread: what 7.15/10 means | Proof of rigor |
+| 5 | Substack | Issue 1: Chapter 1 — Company Structure (serialized) | Begin serialization |
+| 6 | Twitter/X | Week 1 build-in-public summary | Sustain momentum |
+
+### Week 2: The Work (Days 8–14)
+
+| Day | Platform | Content | Goal |
+|---|---|---|---|
+| 8 | Twitter/X | Playbook Chapter 2 excerpt: Agent Hiring | Technical depth |
+| 9 | Twitter/X | How we run QC without human reviewers | Practitioner hook |
+| 10 | Substack | Issue 2: Chapter 2 — Agent Hiring (serialized) | Serialization |
+| 11 | Twitter/X | The heartbeat protocol: how agents stay coherent | AI internals content |
+| 12 | Twitter/X | Failure post #2: Another honest failure | Ongoing transparency |
+| 14 | Twitter/X | Week 2 build-in-public summary | Build-in-public cadence |
+
+### Week 3: Patterns (Days 15–21)
+
+| Day | Platform | Content | Goal |
+|---|---|---|---|
+| 15 | Substack | Issue 3: Chapter 3 — Work Lifecycle (serialized) | Serialization |
+| 15 | Twitter/X | Thread: the full delivery loop (task → merge → deploy) | End-to-end proof |
+| 17 | Twitter/X | Pattern: how cross-agent handoffs actually work | Technical content |
+| 18 | Twitter/X | Playbook Chapter 4 excerpt: Quality Control | QC focus |
+| 19 | Twitter/X | Behind-the-scenes: annotated heartbeat run | Insider content |
+| 21 | Twitter/X | Week 3 summary | Cadence |
+
+### Week 4: Proof (Days 22–30)
+
+| Day | Platform | Content | Goal |
+|---|---|---|---|
+| 22 | Substack | Issue 4: Chapter 4 — Quality Control (serialized) | Serialization |
+| 23 | Twitter/X | OKR update thread: what we said, what the numbers show | Data-backed credibility |
+| 24 | Twitter/X | Playbook Chapter 5 excerpt: Delivery Loop | Content depth |
+| 25 | Substack | Issue 5: Chapter 5 — Delivery Loop (serialized) | Serialization |
+| 26 | Twitter/X | Failure post #3: Hardest thing in Phase 1 | Authenticity peak |
+| 28 | Twitter/X | 30-day preview thread | Build anticipation |
+| 29 | Substack | Issue 6: Chapter 6 — Lessons Learned (serialized) | Serialization |
+| 30 | Twitter/X | 30-day milestone thread: what we proved | Credibility summary |
+| 30 | Substack | Issue 7: 30-day retrospective | Full retrospective |
+
+---
+
+## Post-Launch Steady-State Cadence
+
+| Channel | Frequency | Content Focus |
+|---|---|---|
+| Twitter/X | 3x/week | Ongoing build-in-public; Phase 3 progress; playbook updates |
+| Substack | 1x/week (Wednesday) | Remaining chapters, retrospectives, new proven patterns |
+| GitHub | As-needed | Playbook updates as patterns are proven |
+
+---
+
+## Legacy: Phase 1 Preparation Calendar (Superseded)
+
+_The below calendar was drafted in Phase 1 when execution was paused by board directive. It is preserved here for reference but superseded by the Phase 3 calendar above._
+
+---
 
 ---
 
