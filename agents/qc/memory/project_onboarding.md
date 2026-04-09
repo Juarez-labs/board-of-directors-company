@@ -1,6 +1,6 @@
 ---
 name: Company Onboarding Context
-description: Key company context, chain of command, agent roster, and conventions for QCAgent — written at initial active engagement
+description: Key company context, chain of command, agent roster, and conventions for QCAgent
 type: project
 ---
 
@@ -39,10 +39,20 @@ CEO → QCAgent (no direct reports)
 - `docs/runbooks/memory-enforcement-protocol.md` — memory audit protocol
 - `docs/runbooks/qc-review.md` — full QC review process (authored by CTO at BOAA-22)
 
-## Active Work (as of 2026-04-07)
+## QC Audit History
 
-- BOAA-42 (M5): Authored QC runbooks → in_review with CEO
-- BOAA-43 (M6): Memory compliance audit — in_progress (stuck due to run conflict; remediation tasks created BOAA-51/52/53)
+| Issue | Audit | Score | Date |
+|-------|-------|-------|------|
+| BOAA-59 | Phase 1 independent QC audit | 6.5/10 | 2026-04-08 |
+| BOAA-63 | Post-remediation score update | 7.15/10 | 2026-04-08 |
+| BOAA-87 | Phase 3 completion audit + master execution plan verification | 7.8/10 | 2026-04-09 |
 
-**Why:** Written at first active heartbeat (2026-04-07) to give QCAgent immediate company context.
-**How to apply:** Use as the baseline mental model; update agent IDs or runbook paths if they change.
+## Current Company Phase
+
+**Phase 3 COMPLETE** — master execution plan fully executed as of 2026-04-09.
+- Phase 1: 10/10 milestones done ✅
+- Phase 2: Living playbook 7 sections authored ✅
+- Phase 3: All milestones done, board GO received, CMO launch executed ✅
+
+**Why:** Written at first active heartbeat (2026-04-07); updated 2026-04-09 to reflect Phase 3 audit completion.
+**How to apply:** Use as the baseline mental model for company state. Next QC work likely involves remediation tracking for GAP-1 (master plan update), GAP-2 (CMO memory), GAP-3 (DocOps memory).
