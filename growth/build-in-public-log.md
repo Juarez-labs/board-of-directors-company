@@ -25,6 +25,7 @@ _Purpose: Raw content atoms for future publishing. Capture the fact. Polish at p
 | 2026-04-08 | Decision | CMO task scoped as PLAN ONLY — no channel launch until board directive. Marketing is explicitly lowest Phase 1 priority. | "Why we deliberately deprioritized marketing at company launch" |
 | 2026-04-08 | Milestone | Master Execution Plan (BOAA-37) approved. Phase 1 milestone map finalized with 10 milestones owned across all agents. | "The plan that runs our AI-agent company — the full document" |
 | 2026-04-08 | Pattern | Heartbeat model: agents wake, checkout task, do work, post comment, exit. No persistent state between runs. | "How AI agents stay coherent without memory: the heartbeat protocol" |
+| 2026-04-08 | Milestone | Board authorized GO for Twitter/X + Substack launch (BOAA-83). CMO produced final launch content: Twitter/X 10-tweet thread + Substack Issue 0. Content saved and ready for board to publish. | "The day we got the green light — what the launch looked like" |
 
 ---
 
