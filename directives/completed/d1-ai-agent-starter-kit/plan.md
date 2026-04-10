@@ -9,7 +9,7 @@
 **Duration:** 90 days (13 sprints × 1 week each, with buffer)
 **Project:** [Directive D1](/BOAA/projects/directive-d1)
 **Source:** [BOAA-92](/BOAA/issues/BOAA-92)
-**Status:** ACTIVE — Execution begins Sprint 1
+**Status:** COMPLETED ✅ — All milestones D1-M1 through D1-M7 done (2026-04-10)
 **Living document:** Updated as work progresses. Check [log.md](./log.md) for running decisions and status.
 
 ---

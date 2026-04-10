@@ -40,7 +40,7 @@ directives/
 
 | Code | Name | Status | Paperclip Project | Owner |
 |---|---|---|---|---|
-| D1 | AI Agent Company Starter Kit | Active | [Directive D1](/BOAA/projects/directive-d1) | CEO |
+| *(none active)* | — | — | — | — |
 
 ---
 
@@ -48,7 +48,8 @@ directives/
 
 | Code | Name | Dates | Outcome |
 |---|---|---|---|
-| *(implicit)* Master Execution Plan v1–v3 | Foundation → Playbook → Publication | 2026 | All 3 phases complete ✅ |
+| *(implicit)* | Master Execution Plan v1–v3 | Foundation → Playbook → Publication | 2026 | All 3 phases complete ✅ |
+| D1 | AI Agent Company Starter Kit | 2026-04-09 → 2026-04-10 | All 7 SCs met; v1.0 starter kit published to public GitHub ✅ |
 
 ---
 
