@@ -37,14 +37,14 @@ describe('DigestService', () => {
   });
 
   test('uses haiku model by default (speed mode)', async () => {
-    await service.digest({ diff: 'diff', format: 'markdown', style: 'concise' });
+    await service.digest({ diff: 'diff --git a/a.js b/a.js\n+const x = 1;', format: 'markdown', style: 'concise' });
     const callArgs = service.client.messages.create.mock.calls[0][0];
     expect(callArgs.model).toBe('claude-haiku-4-5-20251001');
   });
 
   test('uses sonnet model in quality mode', async () => {
     process.env.DIGEST_MODE = 'quality';
-    await service.digest({ diff: 'diff', format: 'markdown', style: 'concise' });
+    await service.digest({ diff: 'diff --git a/a.js b/a.js\n+const x = 1;', format: 'markdown', style: 'concise' });
     const callArgs = service.client.messages.create.mock.calls[0][0];
     expect(callArgs.model).toBe('claude-sonnet-4-6');
   });
@@ -73,7 +73,7 @@ describe('DigestService', () => {
     service.client.messages.create.mockRejectedValueOnce(new Error('API rate limit exceeded'));
 
     await expect(
-      service.digest({ diff: 'diff', format: 'markdown', style: 'concise' })
+      service.digest({ diff: 'diff --git a/a.js b/a.js\n+const x = 1;', format: 'markdown', style: 'concise' })
     ).rejects.toThrow('API rate limit exceeded');
   });
 });

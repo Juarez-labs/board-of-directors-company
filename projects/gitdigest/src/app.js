@@ -7,6 +7,10 @@ const logger = require('./logger');
 
 const app = express();
 
+// Trust one proxy hop (Railway/Fly.io/nginx) so req.ip resolves to real client IP
+// See TRUST_PROXY_HOPS in .env.example
+app.set('trust proxy', 1);
+
 app.use(helmet());
 app.use(cors());
 app.use(express.json({ limit: '2mb' }));
