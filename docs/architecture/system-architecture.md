@@ -1,7 +1,7 @@
 # System Architecture Overview
 
-**Version:** 1.0
-**Date:** 2026-04-08
+**Version:** 1.1
+**Date:** 2026-04-11
 **Author:** DocOps
 **Issue:** [BOAA-46](/BOAA/issues/BOAA-46)
 **Status:** Draft
@@ -24,6 +24,8 @@ This document describes the current system architecture of Board of Directors Co
 | QCAgent | `qa` | Quality Control Agent | CEO | `claude_local` |
 | DocOps | `general` | Document Operations Agent | CEO | `claude_local` |
 | ICEngineer | `engineer` | IC Engineer | CTO | `claude_local` |
+| SecurityEngineer | `engineer` | Security Engineer | CEO | `claude_local` |
+| UXDesigner | `designer` | UX Designer | CEO | `claude_local` |
 
 ---
 
@@ -38,11 +40,15 @@ graph TD
     QCA["🔬 QCAgent\n(Quality Control Agent)\nadapter: claude_local"]
     DOC["📄 DocOps\n(Document Operations Agent)\nadapter: claude_local"]
     ICE["⚙️ ICEngineer\n(IC Engineer)\nadapter: claude_local"]
+    SEC["🔒 SecurityEngineer\n(Security Engineer)\nadapter: claude_local"]
+    UXD["🎨 UXDesigner\n(UX Designer)\nadapter: claude_local"]
 
     CEO --> CMO
     CEO --> CTO
     CEO --> QCA
     CEO --> DOC
+    CEO --> SEC
+    CEO --> UXD
     CTO --> ICE
 
     style CEO fill:#6366f1,color:#fff,stroke:#4f46e5
@@ -51,6 +57,8 @@ graph TD
     style QCA fill:#ef4444,color:#fff,stroke:#dc2626
     style DOC fill:#3b82f6,color:#fff,stroke:#2563eb
     style ICE fill:#8b5cf6,color:#fff,stroke:#7c3aed
+    style SEC fill:#f97316,color:#fff,stroke:#ea580c
+    style UXD fill:#ec4899,color:#fff,stroke:#db2777
 ```
 
 **Source file:** [`agent-relationships-diagram.mermaid`](./agent-relationships-diagram.mermaid)
@@ -62,6 +70,8 @@ graph TD
 - **QCAgent** is a cross-cutting reviewer. It validates deliverables from all agents before tasks are marked done.
 - **DocOps** ensures all documents and outputs are filed correctly and meet output standards. It is the canonical filing authority.
 - **CMO** owns brand, growth, content, and marketing initiatives.
+- **SecurityEngineer** owns security reviews, threat modeling, and remediation of security findings.
+- **UXDesigner** owns user experience design, interface standards, and usability reviews.
 
 ---
 
@@ -87,6 +97,8 @@ graph LR
         QCA_A["QCAgent"]
         DOC_A["DocOps"]
         ICE_A["ICEngineer"]
+        SEC_A["SecurityEngineer"]
+        UXD_A["UXDesigner"]
     end
 
     subgraph WORKSPACE["Execution Workspace"]
@@ -102,6 +114,8 @@ graph LR
     SCHED -- "wake heartbeat" --> QCA_A
     SCHED -- "wake heartbeat" --> DOC_A
     SCHED -- "wake heartbeat" --> ICE_A
+    SCHED -- "wake heartbeat" --> SEC_A
+    SCHED -- "wake heartbeat" --> UXD_A
 
     CEO_A -- "checkout/update tasks\nassign/delegate" --> API
     CMO_A -- "checkout/update tasks" --> API
@@ -109,6 +123,8 @@ graph LR
     QCA_A -- "checkout/update tasks" --> API
     DOC_A -- "checkout/update tasks" --> API
     ICE_A -- "checkout/update tasks" --> API
+    SEC_A -- "checkout/update tasks" --> API
+    UXD_A -- "checkout/update tasks" --> API
 
     API --> APPROVAL
     APPROVAL -- "approval events" --> CEO_A
@@ -119,6 +135,8 @@ graph LR
     DOC_A -- "read/write files\ngit commits" --> REPO
     ICE_A -- "read/write files\ngit commits" --> REPO
     QCA_A -- "read/write files" --> REPO
+    SEC_A -- "read/write files\ngit commits" --> REPO
+    UXD_A -- "read/write files\ngit commits" --> REPO
 
     REPO --- FS
 ```
