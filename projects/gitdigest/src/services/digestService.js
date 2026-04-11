@@ -1,5 +1,16 @@
 const Anthropic = require('@anthropic-ai/sdk');
 
+// v2 enhancement: secret pattern detection in diffs (Finding #6)
+const SECRET_PATTERNS = [
+  /sk-ant-[a-zA-Z0-9_-]{20,}/,  // Anthropic API keys
+  /ghp_[a-zA-Z0-9]{36}/,         // GitHub personal access tokens
+  /AKIA[0-9A-Z]{16}/,            // AWS access key IDs
+];
+
+function containsSecrets(diff) {
+  return SECRET_PATTERNS.some((pattern) => pattern.test(diff));
+}
+
 const MODEL_MAP = {
   speed: 'claude-haiku-4-5-20251001',
   quality: 'claude-sonnet-4-6',
@@ -47,17 +58,20 @@ class DigestService {
       '```',
     ].join('\n');
 
+    const warn = containsSecrets(diff);
+
     const message = await this.client.messages.create({
       model,
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: [{ role: 'user', content: userPrompt }],
+      timeout: 30_000,
     });
 
     const notes = message.content[0].text;
     const tokensUsed = message.usage.input_tokens + message.usage.output_tokens;
 
-    return { notes, tokensUsed };
+    return { notes, tokensUsed, warn };
   }
 }
 
