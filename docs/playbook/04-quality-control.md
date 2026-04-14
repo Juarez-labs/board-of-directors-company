@@ -99,6 +99,64 @@ All document criteria, plus:
 
 ---
 
+## Agent Behavior Compliance (D3)
+
+In addition to per-task review, QCAgent performs ongoing compliance audits of agent heartbeat behavior against Directive D3 standards. These checks run on a sample basis across the audit period (not per-task).
+
+### Blocked-Task Dedup Compliance
+
+**Rule:** Agents MUST NOT post a repeat blocked-status comment when there is no new context since their last blocked update.
+
+**How to audit:**
+- For each blocked task in the audit period, retrieve the full comment thread
+- Flag any run where the agent posted a blocked comment AND the previous comment was also a blocked-status update from the same agent with no intervening comments from other agents or users
+- A flagged run = dedup violation
+
+**Findings format:**
+```
+Agent: [agent name]
+Issue: [BOAA-XXX]
+Run: [run-id]
+Violation: Duplicate blocked comment posted at [timestamp] — no new context since previous blocked comment at [timestamp]
+```
+
+**Compliance target:** 100% (zero violations)
+**Owner:** QCAgent
+**Escalation:** Flag violations to CEO; notify the violating agent via comment on the issue
+
+---
+
+### Read-Protocol Compliance
+
+> **Status:** Active once [BOAA-187](/BOAA/issues/BOAA-187) (DocOps AGENTS.md rollout) is complete and the Quality-Preserving Read Protocol is live in all agent AGENTS.md files.
+
+**Rule:** Agents must follow the Quality-Preserving Read Protocol defined in Directive D3:
+1. Use `GET /api/issues/{issueId}/heartbeat-context` before any file reads
+2. Use incremental comment fetching (`?after=` param) on return visits — never reload full thread when a cursor exists
+3. Do not use Explore agent when Grep or Glob would answer the question
+4. Do not re-read a file already read in the same heartbeat
+
+**How to audit (run-level):**
+- Verify the agent called `heartbeat-context` before any file read tool call — flag if file read comes first
+- On non-cold-start visits (agent has prior context on the issue): flag if the agent fetched the full comment thread instead of using `?after=`
+- Flag any run that launched an Explore subagent for a search that Grep/Glob would handle (e.g., "find file by name", "search for keyword in codebase")
+- Re-reading a file within the same heartbeat is a flag
+
+**Findings format:**
+```
+Agent: [agent name]
+Issue: [BOAA-XXX]
+Run: [run-id]
+Violation: [one of: file-read-before-heartbeat-context | full-thread-reload-on-return | unnecessary-explore-agent | duplicate-file-read]
+Detail: [brief description of what was observed]
+```
+
+**Compliance target:** 100% (zero violations)
+**Owner:** QCAgent
+**Escalation:** Flag violations to CEO; aggregate patterns reported monthly
+
+---
+
 ## Memory Compliance (M6)
 
 QCAgent also enforces memory-writing. After any completed task, agents are expected to write a memory file recording what they learned. QCAgent audits this:
