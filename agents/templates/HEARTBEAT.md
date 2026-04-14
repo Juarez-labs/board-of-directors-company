@@ -18,6 +18,7 @@
 
 - Always checkout before working.
 - Do the work. Comment and update status when done.
+- **Issue all independent reads in a single parallel message** — do not read files sequentially when they can be batched.
 
 ## 5. Delegation
 

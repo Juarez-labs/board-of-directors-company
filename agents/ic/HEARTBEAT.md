@@ -19,6 +19,15 @@
 - Write the code, commit with proper co-author and ticket reference in the message.
 - Post a progress comment before exiting each heartbeat.
 
+## 3a. Parallel Reads Rule
+
+Issue all independent file reads in a **single message as parallel tool calls**. Do NOT read files sequentially when they can be batched — each sequential read wastes time and input tokens.
+
+- **Correct:** One message with Read A + Read B + Glob C as simultaneous tool calls.
+- **Wrong:** Read A → wait → Read B → wait → Read C.
+
+This applies to: startup reads, task context + referenced docs, any set of files that do not depend on each other's content.
+
 ## 4. QC Handoff
 
 - When implementation is complete, update status to `in_review` and reassign to the QC agent.

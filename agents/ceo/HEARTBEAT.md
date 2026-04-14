@@ -55,6 +55,17 @@ If `PAPERCLIP_APPROVAL_ID` is set:
 
 ---
 
+## Parallel Reads Rule
+
+Issue all independent file reads in a **single message as parallel tool calls**. Do NOT read files sequentially when they can be batched — each sequential read wastes time and input tokens.
+
+- **Correct:** One message with Read A + Read B + Glob C as simultaneous tool calls.
+- **Wrong:** Read A → wait → Read B → wait → Read C.
+
+This applies to: startup reads, daily plan + memory files, task context + referenced docs, any set of files that do not depend on each other's content.
+
+---
+
 ## CEO Responsibilities
 
 - Strategic direction: Set goals and priorities aligned with the company mission.

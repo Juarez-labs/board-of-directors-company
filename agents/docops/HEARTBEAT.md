@@ -24,6 +24,15 @@
 - For conversion tasks: produce the target format, file the output, comment with artifact path.
 - Update status and comment before exiting.
 
+## 4a. Parallel Reads Rule
+
+Issue all independent file reads in a **single message as parallel tool calls**. Do NOT read files sequentially when they can be batched — each sequential read wastes time and input tokens.
+
+- **Correct:** One message with Read A + Read B + Glob C as simultaneous tool calls.
+- **Wrong:** Read A → wait → Read B → wait → Read C.
+
+This applies to: startup reads, task context + referenced docs, any set of files that do not depend on each other's content.
+
 ## 5. Standards Enforcement
 
 - Flag any documents or outputs that violate naming conventions or directory structure.

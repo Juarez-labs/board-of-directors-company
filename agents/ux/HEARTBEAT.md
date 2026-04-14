@@ -22,6 +22,7 @@ Run this checklist on every heartbeat.
 
 - `GET /api/issues/{id}/heartbeat-context` — compact issue state, ancestors, goal.
 - Read the design brief, user research notes, or product spec referenced in the task.
+- **Issue all independent reads in a single parallel message** — do not read files sequentially when they can be batched.
 
 ## 5. Do the Work
 

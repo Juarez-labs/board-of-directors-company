@@ -29,6 +29,15 @@ In addition to per-task reviews, periodically audit agent heartbeat behavior aga
 - **Blocked-task dedup:** Flag runs where an agent posted a duplicate blocked comment with no new context since the prior blocked comment. Target: 0 violations.
 - **Read-protocol compliance** *(active after BOAA-187 is done)*: Flag runs that loaded full comment threads on return visits, read files before calling heartbeat-context, used Explore agent when Grep/Glob would suffice, or re-read files within the same heartbeat. Target: 0 violations.
 
+## 4c. Parallel Reads Rule
+
+Issue all independent file reads in a **single message as parallel tool calls**. Do NOT read files sequentially when they can be batched — each sequential read wastes time and input tokens.
+
+- **Correct:** One message with Read A + Read B + Glob C as simultaneous tool calls.
+- **Wrong:** Read A → wait → Read B → wait → Read C.
+
+This applies to: startup reads, task context + referenced docs, any set of files that do not depend on each other's content.
+
 ## 5. Escalation
 
 - If a systemic issue is found, create a subtask assigned to CEO with findings.
