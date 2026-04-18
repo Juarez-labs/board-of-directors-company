@@ -5,6 +5,7 @@ Company-wide technical documentation for Board of Directors Company.
 ## Sections
 
 - [Output Standards](output-standards.md) — Definition of done, naming conventions, metadata, and review requirements for all deliverable types
+- [Agent Onboarding Standard](agent-onboarding-standard.md) — AGENTS.md template, skill assignment, file root isolation, first heartbeat validation, and project/goal context setup for new agents
 - [Architecture](architecture/) — System design, ADRs, and component diagrams
   - [System Architecture Overview](architecture/system-architecture.md) — Agent roster, reporting structure, infrastructure, and data flow diagrams
 - [Runbooks](runbooks/) — Operational procedures and incident response
