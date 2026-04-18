@@ -5,6 +5,7 @@ Company-wide technical documentation for Board of Directors Company.
 ## Sections
 
 - [Output Standards](output-standards.md) — Definition of done, naming conventions, metadata, and review requirements for all deliverable types
+- [File Root Isolation Policy](file-root-isolation-policy.md) — File root boundaries for BOAA and Aurion Group agent deployments; cross-root access rules and enforcement
 - [Agent Onboarding Standard](agent-onboarding-standard.md) — AGENTS.md template, skill assignment, file root isolation, first heartbeat validation, and project/goal context setup for new agents
 - [Architecture](architecture/) — System design, ADRs, and component diagrams
   - [System Architecture Overview](architecture/system-architecture.md) — Agent roster, reporting structure, infrastructure, and data flow diagrams
