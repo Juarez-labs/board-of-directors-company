@@ -53,10 +53,39 @@ The server starts on port `3000` (or `PORT` if set).
 | `DIGEST_MODE` | No | `speed` | Model selection: `speed` uses claude-haiku (faster, cheaper); `quality` uses claude-sonnet (higher accuracy) |
 | `NODE_ENV` | No | `development` | Set to `production` in deployed environments |
 
+## Running locally
+
+> **Note:** The CLI defaults to `https://api.gitdigest.dev` which may not be publicly available. For local use, start the server yourself and point the CLI at it.
+
+**1. Set your API key** — the server requires `ANTHROPIC_API_KEY` in its environment. Create a `.env` file in the project root (loaded automatically at startup):
+
+```
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+For Paperclip-managed environments, load from the shared instance env:
+
+```bash
+export $(grep ANTHROPIC_API_KEY /home/jarvis2048/.paperclip/instances/default/.env)
+```
+
+**2. Start the server:**
+
+```bash
+node src/server.js
+```
+
+**3. Point the CLI at your local instance:**
+
+```bash
+export GITDIGEST_API_URL=http://localhost:3000
+git diff HEAD~1 | npx gitdigest
+```
+
 ## API usage
 
 ```bash
-curl -X POST https://api.gitdigest.dev/v1/digest \
+curl -X POST http://localhost:3000/v1/digest \
   -H "Content-Type: application/json" \
   -d '{
     "diff": "'"$(git diff HEAD~1)"'",

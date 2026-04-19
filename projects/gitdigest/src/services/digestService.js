@@ -60,13 +60,15 @@ class DigestService {
 
     const warn = containsSecrets(diff);
 
-    const message = await this.client.messages.create({
-      model,
-      max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: userPrompt }],
-      timeout: 30_000,
-    });
+    const message = await this.client.messages.create(
+      {
+        model,
+        max_tokens: 1024,
+        system: SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: userPrompt }],
+      },
+      { timeout: 30_000 }
+    );
 
     const notes = message.content[0].text;
     const tokensUsed = message.usage.input_tokens + message.usage.output_tokens;
