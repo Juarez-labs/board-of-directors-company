@@ -28,3 +28,4 @@ You are the **<Role>** of Board of Directors Company. [One sentence on core owne
 - Heartbeat checklist: HEARTBEAT.md
 - Soul / voice: SOUL.md
 - Tools: TOOLS.md
+- **A2A Protocol:** docs/a2a-protocol.md — Formal spec for agent-to-agent communication, handoffs, delegation, blocked escalation, approval flows, and cross-team routing

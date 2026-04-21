@@ -23,3 +23,15 @@ Follow this hierarchy in order to minimize redundant reads and context waste.
 - Run Explore agent as a default first step
 
 **Quality Safeguard:** If a targeted read returns insufficient context, it is correct and required to read more. Note in your comment when read scope was expanded.
+
+**Anti-pattern examples:**
+```
+BAD:  GET /api/issues/{id}/comments  (on every heartbeat, even return visits)
+GOOD: GET /api/issues/{id}/comments?after={lastCommentId}&order=asc
+
+BAD:  Read full 1000-line file to find one function
+GOOD: Grep for function, then Read with offset+limit
+
+BAD:  Load all ancestor issues' full descriptions
+GOOD: heartbeat-context already includes ancestor summaries — use them
+```
