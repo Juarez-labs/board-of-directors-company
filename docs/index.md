@@ -17,6 +17,7 @@ Company-wide technical documentation for Board of Directors Company.
   - [Acceptance Criteria Template](runbooks/acceptance-criteria-template.md) — Standard format for defining "done" on any task
   - [Memory Enforcement Protocol](runbooks/memory-enforcement-protocol.md) — How QCAgent audits agents for memory compliance
   - [File and Convert Deliverable](runbooks/file-and-convert-deliverable.md) — End-to-end DocOps process for receiving, validating, filing, and converting deliverables
+  - [Skill Dependency Pinning Policy](runbooks/skill-pinning-policy.md) — Commit-hash pinning rules, import playbook, and review cadence for every company skill
 - [Decisions](decisions/) — Architecture Decision Records (ADRs)
 - [Playbook](playbook/) — Living public-facing narrative of how we build and operate the company
   - [01 — Company Structure](playbook/01-company-structure.md)
