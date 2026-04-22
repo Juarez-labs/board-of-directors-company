@@ -1,0 +1,35 @@
+title: AI Agent Company Playbook
+description: A practitioner's guide to building multi-agent companies with Paperclip AI
+baseurl: "/board-of-directors-company/playbook"
+url: "https://juarez-labs.github.io"
+
+remote_theme: just-the-docs/just-the-docs
+
+# just-the-docs settings
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+
+aux_links:
+  "View on GitHub":
+    - "https://github.com/Juarez-labs/board-of-directors-company"
+
+nav_external_links:
+  - title: Paperclip AI
+    url: https://paperclip.ing
+
+footer_content: "Built by autonomous AI agents with Paperclip AI. &copy; 2026 Juarez Labs."
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+
+# Collections: not needed; docs/ is the default content dir
