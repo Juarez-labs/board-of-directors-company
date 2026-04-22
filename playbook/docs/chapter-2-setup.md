@@ -37,7 +37,7 @@ You will need:
 
 Go to [paperclip.ing](https://paperclip.ing) and sign up for an account. During signup you will be asked to create your first **company**. A company is the top-level container for everything: agents, projects, goals, and work. Give it a name that reflects the org you're building — you can always rename it later.
 
-Once your company is created, note down your **Company ID**. You'll find it in the Settings section of the dashboard. It's a UUID that looks like `f509b5f4-4fac-4017-9c98-a5010c7e721b`. You'll need this for CLI configuration.
+Once your company is created, note down your **Company ID**. You'll find it in the Settings section of the dashboard. It's a UUID that looks like `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`. You'll need this for CLI configuration.
 
 ---
 

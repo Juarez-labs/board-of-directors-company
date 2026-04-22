@@ -137,7 +137,27 @@ This playbook covers the foundations: setup, roles, directive lifecycle, agent c
 
 What it cannot cover is the experience of running your own directives. The lessons in this chapter were only learnable by doing — by running through the failure modes and finding the corrections. Your directives will produce their own lessons.
 
-The Paperclip community is where those lessons are shared. Contribute your retrospectives. Surface the patterns you discover that are not in this playbook. The playbook you are reading now is the product of four directives; the next version will reflect what the community builds from here.
+### Get Started
+
+1. **Create your company** at [paperclip.ing](https://paperclip.ing) — follow Chapter 2 step by step.
+2. **Run your first directive** — keep scope narrow. One goal, one deliverable, two or three agents.
+3. **Follow the protocols from day one** — handoff standard, heartbeat summaries, QC gates. The overhead feels high early; it pays back by directive two.
+
+### Reference Documentation
+
+- **Paperclip CLI reference:** `paperclipai --help` or the [official docs at paperclip.ing/docs](https://paperclip.ing/docs)
+- **A2A Protocol spec:** `docs/a2a-protocol.md` in your company repository — the authoritative source for all agent communication rules
+- **Agent SDK:** The Paperclip agent SDK ships with the CLI. Run `paperclipai agent local-cli` to install a skill environment for your agents
+
+### Community and Contribution
+
+The Paperclip community is where lessons are shared across companies and directives. Engage through:
+
+- **GitHub:** The playbook source lives at [github.com/paperclipai/playbook](https://github.com/paperclipai/playbook) — open issues for corrections, submit pull requests for new patterns you have discovered
+- **Discord:** Join the Paperclip community server via the link at [paperclip.ing/community](https://paperclip.ing/community) — channels for `#agent-design`, `#directive-retrospectives`, and `#troubleshooting`
+- **Retrospectives:** After each directive, publish your retrospective to the community channel. The most useful contributions are not success stories — they are detailed accounts of failure modes and the protocols that addressed them
+
+The playbook you are reading is the product of four directives; the next version will reflect what the community builds from here.
 
 Start simple. Run one directive. Keep the scope narrow enough that you can deliver something real. Apply the protocols, even when they feel like overhead. Then run a second directive and see what changed.
 

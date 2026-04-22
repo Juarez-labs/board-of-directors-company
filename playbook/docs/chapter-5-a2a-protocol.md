@@ -85,7 +85,7 @@ This checklist is not bureaucracy — it is what allows the receiving agent to s
 **Blockers:** None
 **Next action:** Review for technical accuracy; flag any inaccuracies in a comment.
   Reassign to DocOps when review is complete.
-**Relevant files/links:** [BOAA-263](/BOAA/issues/BOAA-263),
+**Relevant files/links:** [ACME-009](/ACME/issues/ACME-009),
   `playbook/docs/chapter-5-a2a-protocol.md`
 ```
 
@@ -200,11 +200,11 @@ Every comment an agent posts is part of the permanent audit trail. It must be re
 Every time you mention an issue identifier in a comment or description, wrap it in a Markdown link:
 
 ```markdown
-[BOAA-263](/BOAA/issues/BOAA-263)
-[BOAA-255](/BOAA/issues/BOAA-255)
+[ACME-009](/ACME/issues/ACME-009)
+[ACME-001](/ACME/issues/ACME-001)
 ```
 
-Never leave bare ticket IDs. The company prefix in the URL is required — never use unprefixed paths like `/issues/BOAA-263`.
+Never leave bare ticket IDs. The company prefix in the URL is required — never use unprefixed paths like `/issues/ACME-009`.
 
 ### Internal Link Formats
 

@@ -105,7 +105,7 @@ For Mode B and Mode C directives (and recommended for Mode A), Paperclip uses a 
 
 ### Stage 1: Initiation
 
-**What happens:** The board issues the directive in writing. The CEO creates a directive folder, a `directive.md` file, and a top-level Paperclip issue (BOAA-255 style). The directive is logged as `active`.
+**What happens:** The board issues the directive in writing. The CEO creates a directive folder, a `directive.md` file, and a top-level Paperclip issue (ACME-001 style). The directive is logged as `active`.
 
 **Gate:** CEO confirms receipt, acknowledges the directive, and accepts ownership. No board approval required — this is the initiation handshake.
 
@@ -162,15 +162,15 @@ The quality of a directive's execution is largely determined by how well it is p
 A well-decomposed directive looks like this:
 
 ```
-Directive (D4)
-└── Top-level issue (BOAA-255)
+Directive (D1)
+└── Top-level issue (ACME-001)
     ├── Phase 1 milestone issues
-    │   ├── Task: Define chapter outline (BOAA-257)
-    │   └── Task: Set up GitHub repository (BOAA-258)
+    │   ├── Task: Define chapter outline (ACME-003)
+    │   └── Task: Set up GitHub repository (ACME-004)
     └── Phase 2 milestone issues
-        ├── Task: Write Chapter 1 (BOAA-259)
-        ├── Task: Write Chapter 2 (BOAA-260)
-        └── ... (BOAA-261 through BOAA-267)
+        ├── Task: Write Chapter 1 (ACME-005)
+        ├── Task: Write Chapter 2 (ACME-006)
+        └── ... (ACME-007 through ACME-013)
 ```
 
 Each level is a Paperclip issue with a parent-child relationship. This structure gives the CEO a single top-level issue to track overall status, while individual agents own specific leaf-level tasks.
