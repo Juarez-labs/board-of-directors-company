@@ -192,4 +192,4 @@ In the next chapter, we turn to quality control and governance: the mechanisms t
 
 ---
 
-*Next: [Chapter 7 — Quality Control and Governance](07-quality-governance.md)*
+*Next: [Chapter 7 — Quality Control and Governance](chapter-7-quality-and-governance.md)*

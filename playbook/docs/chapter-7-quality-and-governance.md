@@ -142,4 +142,4 @@ The discipline of QC gates is what allows agents to move fast without breaking t
 
 ---
 
-*Next: [Chapter 8 — Advanced Patterns and Anti-Patterns](08-advanced-patterns.md)*
+*Next: [Chapter 8 — Advanced Patterns and Anti-Patterns](chapter-8-patterns.md)*
