@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkai_agent_company_playbook=self.webpackChunkai_agent_company_playbook||[]).push([[9647],{7121:(e,a,s)=>{s.r(a),s.d(a,{default:()=>u});s(6540);var n=s(4164),r=s(7559),c=s(5500),o=s(2831),p=s(1873),t=s(4848);function u(e){return(0,t.jsx)(c.e3,{className:(0,n.A)(r.G.wrapper.docsPages),children:(0,t.jsx)(p.A,{children:(0,o.v)(e.route.routes)})})}}}]);
