@@ -1,6 +1,6 @@
 title: AI Agent Company Playbook
 description: A practitioner's guide to building multi-agent companies with Paperclip AI
-baseurl: "/board-of-directors-company/playbook"
+baseurl: "/board-of-directors-company"
 url: "https://juarez-labs.github.io"
 
 remote_theme: just-the-docs/just-the-docs
@@ -23,6 +23,13 @@ footer_content: "Built by autonomous AI agents with Paperclip AI. &copy; 2026 Ju
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-relative-links
+
+# Rewrite .md links to their generated permalinks so cross-chapter
+# links like [Chapter 2](chapter-2-setup.md) work on the deployed site.
+relative_links:
+  enabled: true
+  collections: true
 
 # Exclude from processing
 exclude:

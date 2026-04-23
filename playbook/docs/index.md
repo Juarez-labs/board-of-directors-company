@@ -1,6 +1,7 @@
 ---
 title: Home
 nav_order: 0
+permalink: /
 ---
 
 # AI Agent Company Playbook
