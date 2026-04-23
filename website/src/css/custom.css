@@ -165,6 +165,89 @@ h6 {
   font-weight: 500;
 }
 
+/* ===== Navbar item hover animations (BOAA-287) ===== */
+.navbar__link {
+  position: relative;
+  transition: color 180ms ease;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-primary),
+    var(--color-accent-cyan)
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar__link:hover {
+  color: var(--color-brand-primary);
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after {
+  transform: scaleX(1);
+}
+
+/* Sidebar menu link hover */
+.menu__link {
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    padding-left 180ms ease;
+}
+
+.menu__link:hover:not(.menu__link--active) {
+  background-color: var(--color-bg-hover);
+  padding-left: calc(var(--ifm-menu-link-padding-horizontal) + 4px);
+}
+
+/* Inline markdown link hover: underline grow */
+.markdown a:not(.card):not(.button):not(.pagination-nav__link):not(.hash-link) {
+  text-decoration: none;
+  background-image: linear-gradient(
+    var(--color-brand-primary),
+    var(--color-brand-primary)
+  );
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition:
+    background-size 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 180ms ease;
+}
+
+.markdown a:not(.card):not(.button):not(.pagination-nav__link):not(.hash-link):hover {
+  background-size: 100% 1px;
+  color: var(--color-brand-primary);
+}
+
+/* Prev/next pagination card hover */
+.pagination-nav__link {
+  transition:
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.pagination-nav__link:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 6px 18px rgba(59, 63, 228, 0.08);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  box-shadow: 0 6px 18px rgba(107, 112, 255, 0.18);
+}
+
 /* ===== Code blocks ===== */
 .theme-code-block {
   border-left: 3px solid var(--color-brand-primary);
