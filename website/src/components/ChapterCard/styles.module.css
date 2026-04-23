@@ -1,0 +1,263 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 12px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  text-decoration: none !important;
+  color: var(--color-text-primary) !important;
+  overflow: hidden;
+  transition:
+    transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(59, 63, 228, 0.12);
+  border-color: var(--color-brand-primary);
+  background-color: var(--color-bg-hover);
+}
+
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 12px 32px rgba(107, 112, 255, 0.22);
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-brand-primary) 15%, transparent),
+    color-mix(in srgb, var(--color-accent-cyan) 15%, transparent)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-primary);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  transition: transform 280ms ease-in-out;
+}
+
+.cardNumber {
+  font-feature-settings: 'tnum';
+}
+
+.cardTitle {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.cardDescription {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.cardArrow {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-size: 18px;
+  color: var(--color-text-muted);
+  transition: transform 240ms ease, color 240ms ease;
+}
+
+.card:hover .cardArrow {
+  color: var(--color-brand-primary);
+  transform: translateX(4px);
+}
+
+/* ===== Chapter-specific hover theming (BOAA-281 §7) ===== */
+
+/* Ch. 1 — Foundations — icon rotates 360deg */
+.card--ch1:hover .cardIcon {
+  transform: rotate(360deg);
+  transition-duration: 360ms;
+}
+
+/* Ch. 2 — Setup — icon spins 90deg */
+.card--ch2:hover .cardIcon {
+  transform: rotate(90deg);
+  transition-duration: 280ms;
+}
+
+/* Ch. 3 — Roles — 3 agent dots pulse sequentially */
+.card--ch3 .cardIcon::before,
+.card--ch3 .cardIcon::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-brand-primary);
+  opacity: 0.3;
+}
+
+.card--ch3 .cardIcon::before {
+  left: 14px;
+}
+
+.card--ch3 .cardIcon::after {
+  left: 22px;
+}
+
+.card--ch3:hover .cardIcon::before {
+  animation: dotPulse 800ms ease-in-out;
+}
+
+.card--ch3:hover .cardIcon::after {
+  animation: dotPulse 800ms 80ms ease-in-out;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.3); }
+}
+
+/* Ch. 4 — Directive Lifecycle — progress bar sweeps */
+.card--ch4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-primary),
+    var(--color-accent-cyan)
+  );
+  transition: width 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card--ch4:hover::after {
+  width: 100%;
+}
+
+/* Ch. 5 — A2A Protocol — pulse between two points */
+.card--ch5:hover .cardIcon {
+  box-shadow:
+    -14px 0 0 -16px var(--color-accent-cyan),
+    14px 0 0 -16px var(--color-brand-primary);
+  animation: a2aPulse 320ms ease-out;
+}
+
+@keyframes a2aPulse {
+  0%   { letter-spacing: 0; }
+  50%  { letter-spacing: 2px; }
+  100% { letter-spacing: 0; }
+}
+
+/* Ch. 6 — Heartbeat — scale pulse rhythm */
+.card--ch6:hover .cardIcon {
+  animation: heartbeat 400ms ease-in-out;
+}
+
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.3); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Ch. 7 — Governance — shield fill */
+.card--ch7 .cardIcon {
+  position: relative;
+}
+
+.card--ch7 .cardIcon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: var(--color-success);
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 300ms ease;
+  opacity: 0.25;
+}
+
+.card--ch7:hover .cardIcon::before {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Ch. 8 — Architecture — hexagon grid fade */
+.card--ch8 {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='46' viewBox='0 0 40 46'><polygon points='20,1 39,11.5 39,34.5 20,45 1,34.5 1,11.5' fill='none' stroke='%233B3FE4' stroke-width='0.8' opacity='0.15'/></svg>");
+  background-repeat: repeat;
+  background-size: 40px 46px;
+  background-position: 100% 100%;
+  background-blend-mode: normal;
+}
+
+.card--ch8 {
+  --hex-opacity: 0;
+}
+
+.card--ch8::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg-surface);
+  opacity: calc(1 - var(--hex-opacity));
+  transition: opacity 300ms ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card--ch8:hover {
+  --hex-opacity: 1;
+}
+
+.card--ch8 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ch. 9 — Lessons — 5 timeline dots from left */
+.card--ch9 .cardIcon {
+  position: relative;
+}
+
+.card--ch9 .cardIcon::after {
+  content: '• • • • •';
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  letter-spacing: 6px;
+  opacity: 0;
+  transition: opacity 300ms ease, left 300ms ease;
+}
+
+.card--ch9:hover .cardIcon::after {
+  opacity: 0.6;
+  left: -80px;
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card *,
+  .cardIcon,
+  .cardArrow {
+    transition: none !important;
+    animation: none !important;
+  }
+}
